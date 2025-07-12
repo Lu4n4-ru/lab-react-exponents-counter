@@ -1,7 +1,9 @@
-const ExponentThree = () => (
+const ExponentThree = ({count, increment, decrement}) => (
    <div className="exponent-counter-container">
-    <p className="exponent-label">n³</p>
-    <p className="exponent-result">2 * 2 * 2 = <span className="total">8</span></p>
+    <p className="exponent-label">n^3</p>
+    <p className="exponent-result">{count}^3 = <span className="total">Math.pow{count}</span></p>
+    <button className="counter-button" onClick={decrement}>-</button>
+    <button className="counter-button" onClick={increment}>+</button>
   </div>
 );
 
